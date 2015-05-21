@@ -10,7 +10,6 @@
 	tools:context="com.android.fishroom.bulbasaur.LoginActivity"
 	android:gravity="center"
 	android:orientation="vertical"
-	android:layout_margin="50dp"
 >
 
 	<ImageView
