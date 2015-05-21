@@ -9,10 +9,9 @@ import android.view.ViewGroup;
 
 import com.android.fishroom.bulbasaur.R;
 
-public class PlantListFragment extends Fragment
+public class PlantDetailFragment extends Fragment
 {
-
-	public PlantListFragment()
+	public PlantDetailFragment()
 	{
 	}
 
@@ -24,8 +23,9 @@ public class PlantListFragment extends Fragment
 	}
 
 	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+							 Bundle savedInstanceState)
 	{
-		return inflater.inflate(R.layout.fragment_plant_list, container, false);
+		return inflater.inflate(R.layout.fragment_plant_detail, container, false);
 	}
 }
