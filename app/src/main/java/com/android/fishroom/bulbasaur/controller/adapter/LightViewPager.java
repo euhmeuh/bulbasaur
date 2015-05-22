@@ -1,4 +1,4 @@
-package com.android.fishroom.bulbasaur.adapter;
+package com.android.fishroom.bulbasaur.controller.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
