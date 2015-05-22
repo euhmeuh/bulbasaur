@@ -5,12 +5,13 @@ import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 
 import com.android.fishroom.bulbasaur.R;
-import com.android.fishroom.bulbasaur.adapter.ViewPagerAdapter;
+import com.android.fishroom.bulbasaur.controller.adapter.ViewPagerAdapter;
 
 public class ViewPagerActivity extends FragmentActivity
 {
 	protected ViewPagerAdapter adapterViewPager;
 	protected ViewPager viewPager;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
