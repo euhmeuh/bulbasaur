@@ -12,7 +12,8 @@ public class HumidityVpActivity extends ViewPagerActivity
 	{
 		super.onCreate(savedInstanceState);
 
-		super.adapterViewPager = new HumidityViewPager(getSupportFragmentManager());
-		super.viewPager.setAdapter(adapterViewPager);
+		adapterViewPager = new HumidityViewPager(getSupportFragmentManager());
+		viewPager.setAdapter(adapterViewPager);
+		slidingTabLayout.setViewPager(viewPager);
 	}
 }

@@ -13,7 +13,8 @@ public class LightVpActivity extends ViewPagerActivity
 	{
 		super.onCreate(savedInstanceState);
 
-		super.adapterViewPager = new LightViewPager(getSupportFragmentManager());
-		super.viewPager.setAdapter(adapterViewPager);
+		adapterViewPager = new LightViewPager(getSupportFragmentManager());
+		viewPager.setAdapter(adapterViewPager);
+		slidingTabLayout.setViewPager(viewPager);
 	}
 }

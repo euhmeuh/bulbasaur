@@ -2,11 +2,12 @@ package com.android.fishroom.bulbasaur.controller.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.util.SparseArray;
 import android.view.ViewGroup;
 
-public class ViewPagerAdapter extends FragmentStatePagerAdapter
+public class ViewPagerAdapter extends FragmentPagerAdapter
 	{
 		private static final int NUM_ITEMS = 3;
 

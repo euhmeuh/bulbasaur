@@ -12,7 +12,8 @@ public class TemperatureVpActivity extends ViewPagerActivity
 	{
 		super.onCreate(savedInstanceState);
 
-		super.adapterViewPager = new TemperatureViewPager(getSupportFragmentManager());
-		super.viewPager.setAdapter(adapterViewPager);
+		adapterViewPager = new TemperatureViewPager(getSupportFragmentManager());
+		viewPager.setAdapter(adapterViewPager);
+		slidingTabLayout.setViewPager(viewPager);
 	}
 }
