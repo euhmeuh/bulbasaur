@@ -19,16 +19,25 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
             android:name=".PlantListActivity"
-            android:label="@string/title_activity_plant_list" >
-        </activity>
+            android:label="@string/title_activity_plant_list"/>
         <activity
             android:name=".PlantDetailActivity"
-            android:label="@string/title_activity_plant_detail" >
-        </activity>
+            android:label="@string/title_activity_plant_detail"/>
+        <activity
+            android:name=".Model.ViewPagerActivity"
+            android:label="@string/title_activity_view_pager"/>
+        <activity
+            android:name=".TemperatureVpActivity"
+            android:label="temperature" />
+        <activity
+            android:name=".LightVpActivity"
+            android:label="light"/>
+		<activity
+			android:name=".HumidityVpActivity"
+			android:label="humidity"/>
     </application>
 
 </manifest>

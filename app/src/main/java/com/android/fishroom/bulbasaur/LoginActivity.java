@@ -1,5 +1,6 @@
 package com.android.fishroom.bulbasaur;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -9,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class LoginActivity extends ActionBarActivity
+public class LoginActivity extends Activity
 {
 	private Button validate;
 
@@ -26,7 +27,7 @@ public class LoginActivity extends ActionBarActivity
 			@Override
 			public void onClick(View v)
 			{
-				Intent intent = new Intent(v.getContext(), PlantListActivity.class);
+				Intent intent = new Intent(v.getContext(), PlantDetailActivity.class);
 				startActivity(intent);
 				finish();
 			}
