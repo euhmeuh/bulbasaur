@@ -1,15 +1,23 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'releasekey'
+            keyPassword 'android'
+            storeFile file('C:/Users/EXIA/.android/my-release-key.keystore')
+            storePassword 'android'
+        }
+    }
     compileSdkVersion 21
     buildToolsVersion "21.1.2"
-
     defaultConfig {
         applicationId "com.android.fishroom.bulbasaur"
         minSdkVersion 15
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
+        signingConfig signingConfigs.config
     }
     buildTypes {
         release {
@@ -22,12 +30,23 @@ android {
         exclude 'META-INF/LICENSE.txt'
         exclude 'META-INF/NOTICE.txt'
     }
+    productFlavors {
+    }
+}
+
+repositories {
+    maven { url "https://jitpack.io" }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    wearApp project(':wear')
     provided 'org.projectlombok:lombok:1.12.6'
     compile 'com.android.support:appcompat-v7:22.1.1'
     compile 'com.android.support:cardview-v7:22.0.0'
-    compile project(':libraries:AsyncHttpClient');
+    compile 'com.android.support:recyclerview-v7:22.0.0'
+    compile 'com.github.PhilJay:MPAndroidChart:v2.1.0'
+    compile project(':libraries:AsyncHttpClient')
+    compile 'com.google.android.gms:play-services:7.3.0'
+    compile 'com.github.lecho:hellocharts-android:v1.5.5'
 }

@@ -53,6 +53,18 @@ public class ViewPagerAdapter extends FragmentPagerAdapter
 	@Override
 	public CharSequence getPageTitle(int position)
 	{
+		switch (position)
+		{
+			case 0:
+				return "Aujourd'hui";
+
+			case 1:
+				return "Semaine";
+
+			case 2:
+				return "Mois";
+		}
+
 		return "Page " + position;
 	}
 }

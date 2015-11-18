@@ -1,14 +1,8 @@
 package com.android.fishroom.bulbasaur.fragments.temperature;
 
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import com.android.fishroom.bulbasaur.lib.util.weeklyFragment;
 
-import com.android.fishroom.bulbasaur.R;
-
-public class TWeeklyFragment extends Fragment
+public class TWeeklyFragment extends weeklyFragment
 {
 	public static TWeeklyFragment newInstance()
 	{
@@ -22,16 +16,8 @@ public class TWeeklyFragment extends Fragment
 	}
 
 	@Override
-	public void onCreate(Bundle savedInstanceState)
+	protected void setCategorie()
 	{
-		super.onCreate(savedInstanceState);
-
-	}
-
-	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-							 Bundle savedInstanceState)
-	{
-		return inflater.inflate(R.layout.fragment_temperature_vp, container, false);
+		categorie = 0;
 	}
 }

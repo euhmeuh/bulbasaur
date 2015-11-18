@@ -2,7 +2,7 @@ package com.android.fishroom.bulbasaur;
 
 import android.os.Bundle;
 
-import com.android.fishroom.bulbasaur.Model.ViewPagerActivity;
+import com.android.fishroom.bulbasaur.lib.util.ViewPagerActivity;
 import com.android.fishroom.bulbasaur.controller.adapter.TemperatureViewPager;
 
 public class TemperatureVpActivity extends ViewPagerActivity
@@ -13,7 +13,10 @@ public class TemperatureVpActivity extends ViewPagerActivity
 		super.onCreate(savedInstanceState);
 
 		adapterViewPager = new TemperatureViewPager(getSupportFragmentManager());
+
+		toolbar.setTitle(getResources().getString(R.string.temperature));
 		viewPager.setAdapter(adapterViewPager);
 		slidingTabLayout.setViewPager(viewPager);
+
 	}
 }

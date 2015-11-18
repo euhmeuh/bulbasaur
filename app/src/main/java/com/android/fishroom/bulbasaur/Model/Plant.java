@@ -1,15 +1,18 @@
-package com.android.fishroom.bulbasaur.Model;
+package com.android.fishroom.bulbasaur.model;
 
-import lombok.Data;
+import com.google.gson.annotations.SerializedName;
 
-@Data
+import java.util.ArrayList;
+import java.util.Date;
+
+@lombok.Data
 public class Plant extends Model
 {
-	private String id;
-	private String name;
-	private String type;
+	@SerializedName("id_plant")private String id;
+	@SerializedName("name_plant")private String name;
+	@SerializedName("latin_name")private String type;
 
-	private TemperatureData temperature;
-	private LightData light;
-	private HumidityData humidity;
+	@SerializedName("T")private float temperature;
+	@SerializedName("L")private float light;
+	@SerializedName("H")private float humidity;
 }

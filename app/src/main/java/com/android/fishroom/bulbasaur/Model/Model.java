@@ -1,4 +1,4 @@
-package com.android.fishroom.bulbasaur.Model;
+package com.android.fishroom.bulbasaur.model;
 
 import java.io.Serializable;
 

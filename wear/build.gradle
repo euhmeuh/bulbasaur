@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'releasekey'
+            keyPassword 'android'
+            storeFile file('C:/Users/EXIA/.android/my-release-key.keystore')
+            storePassword 'android'
+        }
+    }
+    compileSdkVersion 21
+    buildToolsVersion '21.1.2'
+    defaultConfig {
+        applicationId "com.android.fishroom.bulbasaur"
+        minSdkVersion 20
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+        signingConfig signingConfigs.config
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    productFlavors {
+    }
+}
+
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    provided 'org.projectlombok:lombok:1.12.6'
+    compile 'com.google.android.support:wearable:1.2.0'
+    compile 'com.google.android.gms:play-services-wearable:7.3.0'
+}
